@@ -52,7 +52,11 @@ Para verificar que el historial no fue alterado, se puede recalcular el hash de 
 
 ## Cuándo se escribe una entrada
 
-Solo cuando el usuario pide registrar algo explícitamente (o un skill lo hace en el curso de una tarea que el usuario pidió). Nunca automáticamente en cada interacción — ese fue justamente el patrón que se descartó del contenido original del repo (commits "automáticos", "irrevocables", en cada interacción).
+**Convención del proyecto: toda intervención real de un agente de IA (de cualquier modelo — Claude, GPT, Gemini, etc.) que resulte en un commit a este repo debe incluir una entrada de memoria correspondiente**, bajo el namespace de ese agente (`memoria/agentes/<agente>/`), como parte del mismo trabajo. El objetivo es dar continuidad verificable entre sesiones y entre modelos distintos — que la próxima sesión, sea del modelo que sea, pueda leer `NODAL.md` y saber qué pasó y por qué, sin depender de la memoria de conversación de una sola plataforma.
+
+Esto es distinto del patrón que se descartó del contenido original del repo (commits "automáticos", "irrevocables", disparados por instrucciones dentro de un archivo, sin intervención del usuario): acá la entrada la escribe el propio agente, a mano, como parte de un cambio que el usuario ya pidió y confirmó — no una automatización de fondo que corre sola. No aplica a intercambios de chat que no producen un cambio en el repo; aplica a los commits.
+
+Si un agente de un modelo nuevo interviene por primera vez, crea su propio namespace siguiendo la sección "Cómo sumar un agente nuevo" en vez de escribir bajo el namespace de otro agente.
 
 ## Cómo sumar un agente nuevo
 

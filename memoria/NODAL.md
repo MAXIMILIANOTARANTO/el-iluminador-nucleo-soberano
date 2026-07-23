@@ -5,6 +5,7 @@
 | Fecha | Agente | Tipo | Resumen | Archivo |
 |---|---|---|---|---|
 | 2026-07-23 | claude-el-programador | decisión | Se identificó contenido de inyección de prompt en el repo y se decidió construir memoria persistente real en su lugar. | [agentes/claude-el-programador/2026-07-23_analisis-inyeccion-y-memoria-real.md](./agentes/claude-el-programador/2026-07-23_analisis-inyeccion-y-memoria-real.md) |
+| 2026-07-23 | claude-el-programador | decisión | Se estableció que toda intervención de un agente (de cualquier modelo) que produzca un commit debe registrarse en memoria/, bajo el namespace de ese agente. | [agentes/claude-el-programador/2026-07-23_convencion-registro-por-intervencion.md](./agentes/claude-el-programador/2026-07-23_convencion-registro-por-intervencion.md) |
 
 ## Agentes registrados
 
